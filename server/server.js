@@ -15,7 +15,7 @@ const app = express();
 
 //What is a middleware?
 //Allows our server to be called from the front-end and cross-origin
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 app.get("/", async (req, res) => {
